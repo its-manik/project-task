@@ -10,6 +10,24 @@ html {
   scroll-behavior: smooth;
 }
 
+$white-color: #fff;
+$light-gray-color: #f9f9f9;
+
+@mixin section-style {
+  padding: 100px 0;
+}
+@mixin flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -46,14 +64,7 @@ a {
 }
 
 nav .containerr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
+  @include section-style;
   justify-content: space-between;
 }
 
@@ -98,19 +109,19 @@ nav .logo {
 }
 
 .hero {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.3)), to(rgba(77, 77, 77, 0.3))), url("../images/banner.avif");
-  background: linear-gradient(rgba(49, 49, 49, 0.3), rgba(77, 77, 77, 0.3)), url("../images/banner.avif");
+  @include section-style;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(49, 49, 49, 0.3)),
+      to(rgba(77, 77, 77, 0.3))
+    ),
+    url("../images/banner.avif");
+  background: linear-gradient(rgba(49, 49, 49, 0.3), rgba(77, 77, 77, 0.3)),
+    url("../images/banner.avif");
   width: 100%;
   height: 92.5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -127,7 +138,7 @@ nav .logo {
 
   h1 {
     font-size: 4em;
-    color: #fff;
+    color: $white-color;
     font-weight: 400;
     margin: 0 0 20px 0;
   }
@@ -138,9 +149,9 @@ nav .logo {
     font-size: 18px;
     outline: none;
     text-transform: uppercase;
-    border: 2px solid #43D881;
-    background: #43D881;
-    color: #fff;
+    border: 2px solid #43d881;
+    background: #43d881;
+    color: $white-color;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -154,19 +165,11 @@ nav .logo {
 /* services*/
 
 #services {
-  padding: 100px 0;
+  @include section-style;
 }
 
 .servicesBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  @include section-style;
   gap: 30px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -180,23 +183,21 @@ nav .logo {
   position: relative;
 
   .boxContent {
+    @include section-style;
     position: absolute;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 30px;
-    color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.5)), to(rgba(77, 77, 77, 0.5)));
+    color: $white-color;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(49, 49, 49, 0.5)),
+      to(rgba(77, 77, 77, 0.5))
+    );
     background: linear-gradient(rgba(49, 49, 49, 0.5), rgba(77, 77, 77, 0.5));
     width: 100%;
     height: 100%;
@@ -216,27 +217,19 @@ nav .logo {
 /*Blogs*/
 
 #blog {
-  padding: 100px 0;
-  background: #fff;
+  @include section-style;
+  background: $white-color;
 }
 
 /*products*/
 
 #products {
-  padding: 100px 0;
-  background: #f9f9f9;
+  @include section-style;
+  background: $light-gray-color;
 }
 
 .productBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  @include section-style;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 30px;
@@ -272,7 +265,7 @@ nav .logo {
 
 #contact {
   margin-top: 100px;
-  background: #fff;
+  background: $white-color;
   padding: 100px 0;
 
   .container {
@@ -292,15 +285,7 @@ nav .logo {
 }
 
 .left_contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  @include section-style;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -311,7 +296,7 @@ nav .logo {
 
 .contact_box {
   padding: 20px 50px;
-  background: #fff;
+  background: $white-color;
   border-radius: 10px;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -327,26 +312,18 @@ nav .logo {
     margin-bottom: 15px;
     margin: auto;
     margin-bottom: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    @include section-style;
 
     &.a {
-      background-color: #DFF8E9;
+      background-color: #dff8e9;
     }
 
     &.b {
-      background-color: #E2DCF9;
+      background-color: #e2dcf9;
     }
 
     &.c {
-      background-color: #FFE0E1;
+      background-color: #ffe0e1;
     }
   }
 }
@@ -363,15 +340,15 @@ nav .logo {
   }
 
   &.a {
-    border-bottom: 10px solid #43D881;
+    border-bottom: 10px solid #43d881;
   }
 
   &.b {
-    border-bottom: 10px solid #603EE1;
+    border-bottom: 10px solid #603ee1;
   }
 
   &.c {
-    border-bottom: 10px solid #FD585C;
+    border-bottom: 10px solid #fd585c;
   }
 }
 
@@ -416,7 +393,7 @@ textarea {
   border-radius: 50px;
   border: none;
   outline: none;
-  background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  background: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
   -webkit-transition: background 3s ease;
   transition: background 3s ease;
   height: 50px;
@@ -425,7 +402,7 @@ textarea {
   &:hover {
     -webkit-transition: background 3s ease;
     transition: background 3s ease;
-    background: linear-gradient(62deg, #E0C3FC 0%, #8EC5FC 100%);
+    background: linear-gradient(62deg, #e0c3fc 0%, #8ec5fc 100%);
   }
 }
 
@@ -473,7 +450,8 @@ footer {
     -ms-flex-direction: column;
     flex-direction: column;
 
-    .left_contact, .right_form {
+    .left_contact,
+    .right_form {
       width: 100%;
     }
   }
@@ -526,5 +504,3 @@ footer {
     width: 100% !important;
   }
 }
-
-

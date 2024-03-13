@@ -9,10 +9,6 @@
 html {
   scroll-behavior: smooth;
 }
-
-$white-color: #fff;
-$light-gray-color: #f9f9f9;
-
 @mixin section-style {
   padding: 100px 0;
 }
@@ -25,9 +21,8 @@ $light-gray-color: #f9f9f9;
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
 }
-
 img {
   width: 100%;
   height: 100%;
@@ -64,7 +59,14 @@ a {
 }
 
 nav .containerr {
-  @include section-style;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -109,19 +111,11 @@ nav .logo {
 }
 
 .hero {
-  @include section-style;
-  background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(49, 49, 49, 0.3)),
-      to(rgba(77, 77, 77, 0.3))
-    ),
-    url("../images/banner.avif");
-  background: linear-gradient(rgba(49, 49, 49, 0.3), rgba(77, 77, 77, 0.3)),
-    url("../images/banner.avif");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.3)), to(rgba(77, 77, 77, 0.3))), url("../images/banner.avif");
+  background: linear-gradient(rgba(49, 49, 49, 0.3), rgba(77, 77, 77, 0.3)), url("../images/banner.avif");
   width: 100%;
   height: 92.5vh;
+  @include flex-center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -138,7 +132,7 @@ nav .logo {
 
   h1 {
     font-size: 4em;
-    color: $white-color;
+    color: #fff;
     font-weight: 400;
     margin: 0 0 20px 0;
   }
@@ -149,9 +143,9 @@ nav .logo {
     font-size: 18px;
     outline: none;
     text-transform: uppercase;
-    border: 2px solid #43d881;
-    background: #43d881;
-    color: $white-color;
+    border: 2px solid #43D881;
+    background: #43D881;
+    color: #fff;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -165,11 +159,11 @@ nav .logo {
 /* services*/
 
 #services {
-  @include section-style;
+  @include section-style
 }
 
 .servicesBox {
-  @include section-style;
+  @include flex-center;
   gap: 30px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -183,21 +177,15 @@ nav .logo {
   position: relative;
 
   .boxContent {
-    @include section-style;
     position: absolute;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 30px;
-    color: $white-color;
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(49, 49, 49, 0.5)),
-      to(rgba(77, 77, 77, 0.5))
-    );
+    color: #fff;
+    @include flex-center;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.5)), to(rgba(77, 77, 77, 0.5)));
     background: linear-gradient(rgba(49, 49, 49, 0.5), rgba(77, 77, 77, 0.5));
     width: 100%;
     height: 100%;
@@ -218,18 +206,18 @@ nav .logo {
 
 #blog {
   @include section-style;
-  background: $white-color;
+  background: #fff;
 }
 
 /*products*/
 
 #products {
   @include section-style;
-  background: $light-gray-color;
+  background: #f9f9f9;
 }
 
 .productBox {
-  @include section-style;
+  @include flex-center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 30px;
@@ -265,7 +253,7 @@ nav .logo {
 
 #contact {
   margin-top: 100px;
-  background: $white-color;
+  background: #fff;
   padding: 100px 0;
 
   .container {
@@ -285,7 +273,7 @@ nav .logo {
 }
 
 .left_contact {
-  @include section-style;
+  @include flex-center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -296,7 +284,7 @@ nav .logo {
 
 .contact_box {
   padding: 20px 50px;
-  background: $white-color;
+  background: #fff;
   border-radius: 10px;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -312,18 +300,19 @@ nav .logo {
     margin-bottom: 15px;
     margin: auto;
     margin-bottom: 20px;
-    @include section-style;
+    @include flex-center;
+
 
     &.a {
-      background-color: #dff8e9;
+      background-color: #DFF8E9;
     }
 
     &.b {
-      background-color: #e2dcf9;
+      background-color: #E2DCF9;
     }
 
     &.c {
-      background-color: #ffe0e1;
+      background-color: #FFE0E1;
     }
   }
 }
@@ -340,15 +329,15 @@ nav .logo {
   }
 
   &.a {
-    border-bottom: 10px solid #43d881;
+    border-bottom: 10px solid #43D881;
   }
 
   &.b {
-    border-bottom: 10px solid #603ee1;
+    border-bottom: 10px solid #603EE1;
   }
 
   &.c {
-    border-bottom: 10px solid #fd585c;
+    border-bottom: 10px solid #FD585C;
   }
 }
 
@@ -393,7 +382,7 @@ textarea {
   border-radius: 50px;
   border: none;
   outline: none;
-  background: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   -webkit-transition: background 3s ease;
   transition: background 3s ease;
   height: 50px;
@@ -402,7 +391,7 @@ textarea {
   &:hover {
     -webkit-transition: background 3s ease;
     transition: background 3s ease;
-    background: linear-gradient(62deg, #e0c3fc 0%, #8ec5fc 100%);
+    background: linear-gradient(62deg, #E0C3FC 0%, #8EC5FC 100%);
   }
 }
 
@@ -450,8 +439,7 @@ footer {
     -ms-flex-direction: column;
     flex-direction: column;
 
-    .left_contact,
-    .right_form {
+    .left_contact, .right_form {
       width: 100%;
     }
   }

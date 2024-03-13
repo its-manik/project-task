@@ -107,12 +107,15 @@ ul {
 }
 
 nav .logo {
-  width: 100px;
+  width: 150px;
 }
 
 .hero {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.3)), to(rgba(77, 77, 77, 0.3))), url("../images/banner.avif");
-  background: linear-gradient(rgba(49, 49, 49, 0.3), rgba(77, 77, 77, 0.3)), url("../images/banner.avif");
+  background: -webkit-gradient(linear, left center, left bottom, from(rgba(49, 49, 49, 0.8)), to(rgba(77, 77, 77, 0.8))), url("../images/banner.avif");
+  background: linear-gradient( to right,rgba(199, 66, 239, 0.8), rgba(132, 0, 255, 0.8)), url("../images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 92.5vh;
   @include flex-center;
@@ -143,15 +146,16 @@ nav .logo {
     font-size: 18px;
     outline: none;
     text-transform: uppercase;
-    border: 2px solid #43D881;
-    background: #43D881;
-    color: #fff;
+    border: 2px solid #fff;
+    background: #fff;
+    color: #000;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     cursor: pointer;
 
     &:hover {
       background: none;
+    color: #fff
     }
   }
 }
@@ -159,7 +163,8 @@ nav .logo {
 /* services*/
 
 #services {
-  @include section-style
+  @include section-style;
+ 
 }
 
 .servicesBox {
@@ -206,14 +211,24 @@ nav .logo {
 
 #blog {
   @include section-style;
-  background: #fff;
+}
+
+.card a{
+  background-color: #8c11ff !important;
+  border: none;
 }
 
 /*products*/
 
 #products {
   @include section-style;
-  background: #f9f9f9;
+  background: -webkit-gradient(linear, left center, left bottom, from(rgba(49, 49, 49, 0.8)), to(rgba(77, 77, 77, 0.8))), url("../images/banner.avif");
+  background: linear-gradient( to right,rgba(199, 66, 239, 0.8), rgba(132, 0, 255, 0.8)), url("../images/banner.avif");
+  width: 100%;
+
+  .sectionHeading, .sectionHeading p{
+    color: #fff;
+  }
 }
 
 .productBox {
@@ -382,16 +397,16 @@ textarea {
   border-radius: 50px;
   border: none;
   outline: none;
-  background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  background: #8c11ff;
   -webkit-transition: background 3s ease;
-  transition: background 3s ease;
+  transition: background .3s ease;
   height: 50px;
-  cursor: pointer;
+  color: #fff;
 
   &:hover {
     -webkit-transition: background 3s ease;
-    transition: background 3s ease;
-    background: linear-gradient(62deg, #E0C3FC 0%, #8EC5FC 100%);
+    transition: background .3s ease;
+    background: #7500e2;
   }
 }
 
@@ -400,7 +415,7 @@ textarea {
 footer {
   padding: 40px;
   text-align: center;
-  background: hsla(120, 4%, 5%, 0.842);
+  background: linear-gradient(to right, rgba(181, 66, 239, 0.8), rgba(132, 0, 255, 0.8));
   color: #fff;
 }
 

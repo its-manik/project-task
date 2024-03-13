@@ -88,12 +88,15 @@ ul li a:hover::after {
 }
 
 nav .logo {
-  width: 100px;
+  width: 150px;
 }
 
 .hero {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.3)), to(rgba(77, 77, 77, 0.3))), url("../images/banner.avif");
-  background: linear-gradient(rgba(49, 49, 49, 0.3), rgba(77, 77, 77, 0.3)), url("../images/banner.avif");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(199, 66, 239, 0.8)), to(rgba(132, 0, 255, 0.8))), url("../images/hero.jpg");
+  background: linear-gradient(to right, rgba(199, 66, 239, 0.8), rgba(132, 0, 255, 0.8)), url("../images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 92.5vh;
   display: -webkit-box;
@@ -129,15 +132,16 @@ nav .logo {
   font-size: 18px;
   outline: none;
   text-transform: uppercase;
-  border: 2px solid #43D881;
-  background: #43D881;
-  color: #fff;
+  border: 2px solid #fff;
+  background: #fff;
+  color: #000;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 .heroContent button:hover {
   background: none;
+  color: #fff;
 }
 
 /* services*/
@@ -202,13 +206,22 @@ nav .logo {
 /*Blogs*/
 #blog {
   padding: 100px 0;
-  background: #fff;
+}
+
+.card a {
+  background-color: #8c11ff !important;
+  border: none;
 }
 
 /*products*/
 #products {
   padding: 100px 0;
-  background: #f9f9f9;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(199, 66, 239, 0.8)), to(rgba(132, 0, 255, 0.8))), url("../images/banner.avif");
+  background: linear-gradient(to right, rgba(199, 66, 239, 0.8), rgba(132, 0, 255, 0.8)), url("../images/banner.avif");
+  width: 100%;
+}
+#products .sectionHeading, #products .sectionHeading p {
+  color: #fff;
 }
 
 .productBox {
@@ -382,23 +395,26 @@ textarea {
   border-radius: 50px;
   border: none;
   outline: none;
-  background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  background: #8c11ff;
   -webkit-transition: background 3s ease;
-  transition: background 3s ease;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
   height: 50px;
-  cursor: pointer;
+  color: #fff;
 }
 .right_form button:hover {
   -webkit-transition: background 3s ease;
-  transition: background 3s ease;
-  background: linear-gradient(62deg, #E0C3FC 0%, #8EC5FC 100%);
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  background: #7500e2;
 }
 
 /* contact section end  */
 footer {
   padding: 40px;
   text-align: center;
-  background: hsla(120, 4%, 5%, 0.842);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(181, 66, 239, 0.8)), to(rgba(132, 0, 255, 0.8)));
+  background: linear-gradient(to right, rgba(181, 66, 239, 0.8), rgba(132, 0, 255, 0.8));
   color: #fff;
 }
 
